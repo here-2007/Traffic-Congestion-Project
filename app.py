@@ -5,7 +5,7 @@ import json
 from xgboost import XGBClassifier
 # Load the trained model
 model = XGBClassifier()
-model.load_model('traffic_model.json')
+model.load_model('models/traffic_model.json')
  
 
 ## streamlit app
