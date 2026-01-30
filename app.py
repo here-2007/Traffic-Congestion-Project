@@ -2,10 +2,14 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import json
+import os
 from xgboost import XGBClassifier
+
 # Load the trained model
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "traffic_model.json")
 model = XGBClassifier()
-model.load_model('models/traffic_model.json')
+model.load_model('MODEL_PATH')
  
 
 ## streamlit app
